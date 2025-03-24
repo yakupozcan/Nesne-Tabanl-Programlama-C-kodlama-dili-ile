@@ -1,0 +1,7 @@
+C:\Users\EKREM\source\repos\nesne1\nesne1\obj\Debug\nesne1.csproj.AssemblyReference.cache
+C:\Users\EKREM\source\repos\nesne1\nesne1\obj\Debug\nesne1.csproj.CoreCompileInputs.cache
+C:\Users\EKREM\source\repos\nesne1\nesne1\bin\Debug\nesne1.exe.config
+C:\Users\EKREM\source\repos\nesne1\nesne1\bin\Debug\nesne1.exe
+C:\Users\EKREM\source\repos\nesne1\nesne1\bin\Debug\nesne1.pdb
+C:\Users\EKREM\source\repos\nesne1\nesne1\obj\Debug\nesne1.exe
+C:\Users\EKREM\source\repos\nesne1\nesne1\obj\Debug\nesne1.pdb
