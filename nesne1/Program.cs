@@ -151,6 +151,7 @@ namespace nesne1
             Console.Clear() ; //ekranı temizle
             Console.CursorLeft = sayix; //işaretçinin konumları değişkenlere göre ayarlanır
             Console.CursorTop = sayiy;
+            Console.ReadLine();
 
             Console.ReadKey(); //herhangi tuşa basıldığında metot biter
         }
