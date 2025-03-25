@@ -1,14 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\EKREM\\source\\repos\\nesne1\\",
+  "WorkspaceRootPath": "C:\\Users\\EKREM\\Documents\\GitHub\\Nesne-Tabanl--Programlama-1-C--kodlama-dili-ile\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|c:\\users\\ekrem\\source\\repos\\nesne1\\nesne1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|c:\\users\\ekrem\\documents\\github\\nesne-tabanl--programlama-1-c--kodlama-dili-ile\\nesne1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|solutionrelative:nesne1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\menukonumayazdir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|solutionrelative:nesne1\\menukonumayazdir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\MenuKonumaYazdir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,11 +27,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\EKREM\\Documents\\GitHub\\Nesne-Tabanl--Programlama-1-C--kodlama-dili-ile\\nesne1\\Program.cs",
               "RelativeDocumentMoniker": "nesne1\\Program.cs",
-              "ToolTip": "C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\Program.cs",
+              "ToolTip": "C:\\Users\\EKREM\\Documents\\GitHub\\Nesne-Tabanl--Programlama-1-C--kodlama-dili-ile\\nesne1\\Program.cs",
               "RelativeToolTip": "nesne1\\Program.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAowKwAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAuwJkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T06:51:02.892Z",
               "EditorCaption": ""
@@ -42,9 +41,9 @@
               "DocumentIndex": 1,
               "Title": "MenuKonumaYazdir.cs",
               "DocumentMoniker": "C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\MenuKonumaYazdir.cs",
-              "RelativeDocumentMoniker": "nesne1\\MenuKonumaYazdir.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\source\\repos\\nesne1\\nesne1\\MenuKonumaYazdir.cs",
               "ToolTip": "C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\MenuKonumaYazdir.cs",
-              "RelativeToolTip": "nesne1\\MenuKonumaYazdir.cs",
+              "RelativeToolTip": "..\\..\\..\\source\\repos\\nesne1\\nesne1\\MenuKonumaYazdir.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T11:43:20.884Z"
