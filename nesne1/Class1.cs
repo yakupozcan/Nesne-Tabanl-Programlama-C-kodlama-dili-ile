@@ -8,6 +8,11 @@ namespace nesne1
 {
     internal class Class1
     {
-       
+        int clsayi1 = 0;
+
+        public static void clmetot()
+        {
+            Console.WriteLine("Merhaba sınıf");
+        }
     }
 }

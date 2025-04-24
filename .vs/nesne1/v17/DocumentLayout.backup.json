@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|c:\\users\\ekrem\\source\\repos\\nesne1\\nesne1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|solutionrelative:nesne1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|solutionrelative:nesne1\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,12 +30,24 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\Program.cs",
               "RelativeDocumentMoniker": "nesne1\\Program.cs",
-              "ToolTip": "C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\Program.cs",
-              "RelativeToolTip": "nesne1\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAH4AAAAxAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\Program.cs*",
+              "RelativeToolTip": "nesne1\\Program.cs*",
+              "ViewState": "AgIAAGICAAAAAAAAAAAAAHkCAAB0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T10:34:36.18Z",
+              "WhenOpened": "2025-04-13T12:08:04.039Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\Class1.cs",
+              "RelativeDocumentMoniker": "nesne1\\Class1.cs",
+              "ToolTip": "C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\Class1.cs",
+              "RelativeToolTip": "nesne1\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T13:07:53.591Z"
             }
           ]
         }

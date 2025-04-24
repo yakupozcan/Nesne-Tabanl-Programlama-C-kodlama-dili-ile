@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.Linq;
 using System.Reflection;
 using System.Security;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace nesne1
@@ -18,11 +20,14 @@ namespace nesne1
             int secimNoEski = 1; //başlangıçta eski seçim yok, imkansız değer atandı
             
             // Menü seçeneklerinin yazıları buradan belirlenir  ******************************************************************
-            string[] menuSecenekler = { " Konuma yazdırma ",    //index 0  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+            string[] menuSecenekler = { " Konuma yazdırma ",    //index 0  
                                         " Dört İşlem ",         //index 1
                                         " Fibonacci ",
                                         " parametre aktarma yöntemleri ",
-                                        " Kutu çiz ", };        //index 4  ////////////////////////////////////////////////////////////
+                                        " Kutu çiz ",
+                                        " Ters Yaz zaY sreT ", //index 5 
+                                        " Koleksiyonlar ",
+                                        " Class (Sınıflar) "};
             //********************************************************************************************************************
             MenuOlustur();
             void MenuOlustur() //menüyü ve davranışları bu metotun içinde
@@ -128,21 +133,23 @@ namespace nesne1
                 Console.Title = menuSecenekler[secimNo]; //başlığı değiştirir
                 switch (secimNo) //hangi seçimdeyken enter basıldıysa ilgili kodlara yönlendirme yap
                 {
-                    case 0:  //index 0
-                        konumaYazdir();
+                    case 0: konumaYazdir();//index 0
+                        break; 
+                    case 1: dortIslem();   //index 1
+                        break;  
+                    case 2: fibonacci2();
                         break;
-                    case 1:  //index 1
-                        dortIslem();
+                    case 3: parametreAktarma_Ornekler();
                         break;
-                    case 2:
-                        fibonacci2();
+                    case 4: kutuciz();
                         break;
-                    case 3:
-                        parametreAktarma_Ornekler();
+                    case 5: tersyaz();   
                         break;
-                    case 4:
-                        kutuciz();
+                    case 6: koleksiyonlar();
                         break;
+                    case 7: sinif();
+                        break;
+
                 }
                 Console.ReadLine();
                 MenuOlustur();
@@ -427,8 +434,8 @@ namespace nesne1
 
                 if (sayi == 1)// faktöriyel metodu sonsuza kadar kendini çağırmasın diye durdurma koşulu burada yer alıyor
                 { 
-                    /* Return yazdır   */ Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(">>>Return: 1<<<");Console.ReadKey(); //Yazı rengini ayarladı ve ">>>Return: 1<<<" 
-                    /* Temizle         */ KutuyuSil(sıra * 5, (sıra * 1) + 2, (Console.BufferWidth - (sıra * 4)) - 2, (Console.BufferHeight - (sıra * 1)) - 2); //En içerde kalan kutu silinir
+                    /* Return yazdır       */ Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(">>>Return: 1<<<");Console.ReadKey(); //Yazı rengini ayarladı ve ">>>Return: 1<<<" 
+                    /* Temizle             */ KutuyuSil(sıra * 5, (sıra * 1) + 2, (Console.BufferWidth - (sıra * 4)) - 2, (Console.BufferHeight - (sıra * 1)) - 2); //En içerde kalan kutu silinir
                     return 1; //Return metodu çalıştığında aşağıdaki kodlar çalışmaz
                 }
                 // sayı 1 olmadığı için aşağıdaki kodlar çalışacaktır
@@ -480,5 +487,214 @@ namespace nesne1
             } while (ornekSecim != '7');
             
         }//Bu konuyu örnklerle anlatan metot
+        static void tersyaz() //girilen yazıyı tersten yadırır
+        {
+            ConsoleKey c; //kontrol mekanizmasındaki tuş girdi
+            do
+            {
+                Console.Clear ();
+                string yazi = Console.ReadLine();
+                Console.WriteLine();
+                for(int i = yazi.Length-1;i >= 0; i--)
+                {
+                    Console.Write(yazi[i]);
+                }
+                do
+                {
+                    Console.WriteLine();
+                    Console.Write("Tekrar? (Y/N)");
+                    c = Console.ReadKey().Key;
+                } while (c != ConsoleKey.Y && c !=ConsoleKey.N);
+            } while (c == ConsoleKey.Y);
+        }
+        static void koleksiyonlar()
+        {
+            //|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            //===========================================================================================================
+            // ÖRNEK 1 -- 
+            void ornek1_main()
+            {
+                CalısanMetot("ornek1_main");
+
+                ArrayList koleksiyon = new ArrayList();
+                //koleksiyon
+
+                string[] islem = { "Capacity", "AddRange", "Add", "Clear", "Reverse", "Insert", "Remove"};
+                string[] islemD = islem;
+                int islemSec = 0;
+                if (islem.Length % 2 == 0)
+                {
+                    islemSec = (islem.Length / 2) - 1;
+                }
+                else
+                {
+                    islemSec = ((islem.Length-1)/ 2) ;
+                }
+
+                int islemSecD = islemSec;
+
+                int islemMaxLenght = 0;
+                bool tekrar = true;
+                ConsoleKeyInfo consoleKeyInfo = new ConsoleKeyInfo();
+
+                foreach(string a in islem) {if (a.Length > islemMaxLenght) { islemMaxLenght = a.Length;};}
+                
+                void kodyaz()
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;   Console.Write("ArrayList ");
+                    Console.ForegroundColor = ConsoleColor.Blue;        Console.Write("koleksiyon ");
+                    Console.ForegroundColor = ConsoleColor.White;       Console.Write("= ");
+                    Console.ForegroundColor = ConsoleColor.DarkBlue;    Console.Write("new ");
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;   Console.Write("ArrayList");
+                    Console.ForegroundColor = ConsoleColor.White;       Console.Write("();");
+                    Console.ForegroundColor = ConsoleColor.Blue;        Console.Write("\nkoleksiyon");
+                    Console.ForegroundColor = ConsoleColor.White;       Console.Write('.');
+                    Console.ForegroundColor = ConsoleColor.Yellow;      Console.Write(islem[islemSec]);
+                    Console.ForegroundColor = ConsoleColor.White;       Console.Write("();");
+                    Console.ResetColor();
+                }
+
+                Console.CursorVisible = false;
+                do
+                {
+                    Console.Clear();
+                    Console.SetCursorPosition(0, 0);
+                    Console.WriteLine("Ok tuşları seçimi değiştirir, Enter Onaylar");
+                    string menuyazi = "";
+                    
+                    for (int i = 0; i <= islem.Length - 1; i++)
+                    {
+                        if (islemSec == i)
+                        {
+                            Console.BackgroundColor = ConsoleColor.White;
+                            Console.ForegroundColor = ConsoleColor.Black;
+                        }
+                        else
+                        {
+                            Console.ResetColor();
+                        }
+                            
+                        if (islem[i].Length % 2 != 0) { islem[i] = islem[i] + " "; }
+                        int bosluk = (islemMaxLenght - islem[i].Length) / 2;
+
+
+                        string yazi = " <" + new string(' ', bosluk) + islem[i] + new string(' ', bosluk) + "> ";
+                        menuyazi += yazi;
+                        //Console.Write(yazi);
+                    }
+
+
+                    Console.WriteLine();
+                    kodyaz();
+
+                    string YeniMenuyazi=null;
+                    consoleKeyInfo = Console.ReadKey();
+                    switch (consoleKeyInfo.Key)
+                    {
+                        case ConsoleKey.LeftArrow:
+                            if (islemSecD == 0) { islemSecD = islemD.Length - 1; }
+                            else { islemSecD--; }
+                            string[] yeniDizi = new string[islem.Length];
+                            yeniDizi[0] = islem[islem.Length - 1];
+                            for(int i = 1;i<= yeniDizi.Length - 1; i++) { yeniDizi[i] = islem[i - 1]; }
+                            islem = yeniDizi;
+
+                            for (int i = 0; i < islemMaxLenght + 4; i++)
+                            {
+                                Console.SetCursorPosition(0, 1);
+                                YeniMenuyazi = menuyazi.Substring(menuyazi.Length - 1, 1) + menuyazi.Substring(0, menuyazi.Length - 1);
+                                menuyazi = YeniMenuyazi;
+                                Console.Write(menuyazi);
+                                Thread.Sleep(1);
+                            }
+                               
+
+                            break;
+                        case ConsoleKey.RightArrow:
+
+                            if (islemSecD == islemD.Length - 1) { islemSecD = 0; }
+                            else { islemSecD++; }
+                           
+                                string[] yeniDizi2 = new string[islem.Length];
+                            for(int i = 0; i <= yeniDizi2.Length-2; i++) { yeniDizi2[i] = islem[i + 1]; }
+                            yeniDizi2[yeniDizi2.Length - 1] = islem[0];
+                            islem = yeniDizi2;
+
+                            Console.SetCursorPosition(0, 1);
+                            
+                            for (int i = 0;i < islemMaxLenght + 4; i++)
+                            {
+                                Console.SetCursorPosition(0, 1);
+                                YeniMenuyazi = menuyazi.Substring(1,menuyazi.Length - 1) + menuyazi.Substring(0,1);
+                                menuyazi = YeniMenuyazi;
+
+                                int mat = (islemMaxLenght + 4) * islemSec;
+                                Console.Write(menuyazi.Substring(0, (islemMaxLenght + 4) * islemSec)); 
+                                Console.ForegroundColor = ConsoleColor.Black; Console.BackgroundColor = ConsoleColor.White;
+                                Console.Write(menuyazi.Substring((islemMaxLenght + 4) * islemSec)+1, (islemMaxLenght)); Console.ResetColor();
+                                Console.Write(menuyazi.Substring((islemMaxLenght + 4) * islemSec+1) + 1, (islemMaxLenght + 4) * islemSec*islem.Length-1);
+                                Thread.Sleep(1);
+                            }
+                            
+
+                            break;
+                        case ConsoleKey.Escape: tekrar = false; 
+                            break;
+                        case ConsoleKey.Enter:
+                            tekrar = false;
+                            break;
+                    }
+                } while (tekrar);
+                
+                Console.CursorVisible = true;
+                // "Capacity", "AddRange", "Add", "Clear", "Reverse", "Insert", "Remove"
+                switch (islemSecD)
+                {
+                    case 0:
+                        Console.WriteLine("Capacity seçildi");
+                        break;
+                    case 1:
+                        Console.WriteLine("AddRange seçildi");
+                        break;
+                    case 2:
+                        Console.WriteLine("Add seçilid");
+                        break;
+                    case 3:
+                        Console.WriteLine("Clear seçildi");
+                        break;
+                    case 4:
+                        Console.WriteLine("Reverse seçildi");
+                        break;
+                    case 5:
+                        Console.WriteLine("Insert seçildi");
+                        break;
+                    case 6:
+                        Console.WriteLine("Remove seçildi");
+                        break;
+                }
+
+
+            }
+            koleksiyonSec();
+
+
+            void koleksiyonSec()
+            {
+                ornek1_main();
+                //Console.Clear();
+                //CalısanMetot("koleksiyonSec()");
+                //Console.WriteLine(  "ÖRNEK 1 -- Öğrenci listele \n" +
+                //                    "" +
+                //                    "" +
+                //                    "");
+                Console.ReadKey();
+            }
+                
+        }
+        static void sinif()
+        {
+            Class1.clmetot();
+        }
     }
+    
 }
