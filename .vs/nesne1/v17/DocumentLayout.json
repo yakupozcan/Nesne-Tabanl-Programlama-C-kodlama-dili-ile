@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\EKREM\\source\\repos\\nesne1\\",
+  "WorkspaceRootPath": "D:\\\u00F6nemli disk\\Project\\VS Studio 2022\\nesne1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|c:\\users\\ekrem\\source\\repos\\nesne1\\nesne1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|solutionrelative:nesne1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|D:\\\u00F6nemli disk\\Project\\VS Studio 2022\\nesne1\\nesne1\\cal\u0131sanmetotclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|solutionrelative:nesne1\\cal\u0131sanmetotclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|solutionrelative:nesne1\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|D:\\\u00F6nemli disk\\Project\\VS Studio 2022\\nesne1\\nesne1\\kutuolusturclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|solutionrelative:nesne1\\kutuolusturclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|d:\\\u00F6nemli disk\\project\\vs studio 2022\\nesne1\\nesne1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12FCF0F-6CA6-46D2-B1A1-A42B96955C38}|nesne1\\nesne1.csproj|solutionrelative:nesne1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +30,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\Program.cs",
+              "DocumentMoniker": "D:\\\u00F6nemli disk\\Project\\VS Studio 2022\\nesne1\\nesne1\\Program.cs",
               "RelativeDocumentMoniker": "nesne1\\Program.cs",
-              "ToolTip": "C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\Program.cs",
+              "ToolTip": "D:\\\u00F6nemli disk\\Project\\VS Studio 2022\\nesne1\\nesne1\\Program.cs",
               "RelativeToolTip": "nesne1\\Program.cs",
-              "ViewState": "AgIAAGICAAAAAAAAAAAAAHkCAAB0AAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAACwAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T12:08:04.039Z",
+              "WhenOpened": "2025-06-01T19:01:15.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cal\u0131sanMetotClass.cs",
+              "DocumentMoniker": "D:\\\u00F6nemli disk\\Project\\VS Studio 2022\\nesne1\\nesne1\\Cal\u0131sanMetotClass.cs",
+              "RelativeDocumentMoniker": "nesne1\\Cal\u0131sanMetotClass.cs",
+              "ToolTip": "D:\\\u00F6nemli disk\\Project\\VS Studio 2022\\nesne1\\nesne1\\Cal\u0131sanMetotClass.cs",
+              "RelativeToolTip": "nesne1\\Cal\u0131sanMetotClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T22:29:21.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\Class1.cs",
-              "RelativeDocumentMoniker": "nesne1\\Class1.cs",
-              "ToolTip": "C:\\Users\\EKREM\\source\\repos\\nesne1\\nesne1\\Class1.cs",
-              "RelativeToolTip": "nesne1\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
+              "Title": "KutuOlusturClass.cs",
+              "DocumentMoniker": "D:\\\u00F6nemli disk\\Project\\VS Studio 2022\\nesne1\\nesne1\\KutuOlusturClass.cs",
+              "RelativeDocumentMoniker": "nesne1\\KutuOlusturClass.cs",
+              "ToolTip": "D:\\\u00F6nemli disk\\Project\\VS Studio 2022\\nesne1\\nesne1\\KutuOlusturClass.cs",
+              "RelativeToolTip": "nesne1\\KutuOlusturClass.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T13:07:53.591Z"
+              "WhenOpened": "2025-06-01T19:39:19.882Z",
+              "EditorCaption": ""
             }
           ]
         }

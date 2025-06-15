@@ -16,45 +16,160 @@ namespace nesne1
         static void Main(string[] args)
         {
             CalısanMetot("Main(string[] args)");
+            int secimNo = 1; //ilk index 0'dır, sayı arttıkça aşağıdaki seçnekleri seçilidir
+            int secimNoEski = 1; //başlangıçta eski seçim yok, imkansız değer atandı
             
-            var menu = new MenuOlusturClass
+            // Menü seçeneklerinin yazıları buradan belirlenir  ******************************************************************
+            string[] menuSecenekler = { " Konuma yazdırma ",    //index 0  
+                                        " Dört İşlem ",         //index 1
+                                        " Fibonacci ",
+                                        " parametre aktarma yöntemleri ",
+                                        " Kutu çiz ",
+                                        " Ters Yaz zaY sreT ", //index 5 
+                                        " Koleksiyonlar ",
+                                        " Class (Sınıflar) "};
+            //********************************************************************************************************************
+            MenuOlustur();
+            void MenuOlustur() //menüyü ve davranışları bu metotun içinde
             {
-                menuSecenekler = new string[]{
-                    " Konuma yazdırma ",    //index 0  
-                    " Dört İşlem ",         //index 1
-                    " Fibonacci ",
-                    " parametre aktarma yöntemleri ",
-                    " Kutu çiz ",
-                    " Ters Yaz zaY sreT ", //index 5 
-                    " Koleksiyonlar ",
-                    
-                },
-                secimNo = 1,//ilk index 0'dır, sayı arttıkça aşağıdaki seçnekleri seçilidir
-                secimNoEski = 1,//başlangıçta eski seçim yok, imkansız değer atandı
-                Eylemler = new Action[]
+                Console.Title = "NTP1"; //başlığı değiştirir
+                Console.Clear(); //tertemiz ekranla işe başlayalım
+                int consoleWidth, consoleHeight;
+                consoleHeight = Console.BufferHeight; // konsola yazılabilecek karakter yüksekliğini alır
+                consoleWidth = Console.BufferWidth;   //konsola yazılabilecek karakter genişliğini alır
+
+                Console.CursorVisible = false; //seçim menüsündeyken işaretçinin görünürlüğünü kapatır
+
+                
+
+                //topMargin değişkeni yukardan kaç birim boşluk bıraklılacağını belirleyecek
+                int topMargin = consoleHeight - menuSecenekler.Length;// seçenekler + menü yazısı eksiltilir
+                if (topMargin % 2 == 1) { topMargin--; } //eğer 2ye tam bölünmüyorsa 1 eksilt
+                topMargin = topMargin / 2; //kalan toplam boşluk 2 ye bölünür
+
+                Console.CursorTop = topMargin; // işaretçinin yüksekliği hesaplamalara göre değişir
+
+                Console.CursorLeft = (consoleWidth - 12) / 2; //başlık yazısının çıkarılıp 2 ye bölünür
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("SEÇİM MENÜSÜ"); // tam ortaya "SEÇİM MENÜSÜ" yazdır
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine(); // 1 satır boşluk
+
+                int[,] menuSecenekKonum = new int[menuSecenekler.Length, 2]; // hangi seçenek hangi konuma yazıldıysa buraya kaydedilecek
+                int leftMarginMenuKutu = consoleWidth/2; // menü kutusu için
+                int lengthMenuKutu = 0; //menu kutusu için
+
+
+                for (int i = 0; i <= menuSecenekler.Length - 1; i++) //tüm seçenekleri yazdıran döngü
                 {
-                    
-                    konumaYazdir,
-                    dortIslem,
-                    fibonacci2,
-                    parametreAktarma_Ornekler,
-                    kutuciz,
-                    tersyaz,
-                    koleksiyonlar,
-                    () => KutuOlustur(10, 5, 70,15),
-                    
-                    
+                    int leftMargin = consoleWidth - menuSecenekler[i].Length;
+                    if (leftMargin % 2 == 1) { leftMargin--; }
+                    leftMargin = leftMargin / 2;  // buraya kadar yazının uzunluğuna göre ortalanma hesaplamaları yapıldı
+                    if (leftMarginMenuKutu> leftMargin) //menünün üstüne çizilecek kutu için en uzun isimli seçenekten ölçü alan kodlar
+                    { leftMarginMenuKutu= leftMargin; lengthMenuKutu = menuSecenekler[i].Length; }
+                    Console.CursorLeft = leftMargin; // işaretçi yatay hizalama yapıldı
+                    menuSecenekKonum[i, 0] = Console.CursorLeft; //yazılan seçeneğin yatay konumu i'ninci indexte kaydedildi
+                    menuSecenekKonum[i, 1] = Console.CursorTop; // yazılan seçeneğin dikey konumu i'ninci indexte kaydedildi
+                    Console.WriteLine(menuSecenekler[i]);  //i'ninci indexteki seçeneği yazdır
+                }
+                Console.ForegroundColor= ConsoleColor.DarkYellow;
+                KutuOlustur(leftMarginMenuKutu-2,topMargin-1, leftMarginMenuKutu + lengthMenuKutu+1,topMargin+menuSecenekler.Length+2);
+                Console.ForegroundColor = ConsoleColor.White;
+
+
+                void secimDegistir() //yün tuşlarına basıldığında tetiklenir
+                {
+                    Console.CursorLeft = menuSecenekKonum[secimNoEski, 0];
+                    Console.CursorTop = menuSecenekKonum[secimNoEski, 1];
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.WriteLine(menuSecenekler[secimNoEski]);
+
+                    Console.CursorLeft = menuSecenekKonum[secimNo, 0];
+                    Console.CursorTop = menuSecenekKonum[secimNo, 1]; //yeni seçimin konumuna git
+                    Console.BackgroundColor = ConsoleColor.DarkGray; //yazı arkaplan rengini değiştir
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.WriteLine(menuSecenekler[secimNo]);    //seçimi tekrar yazdır
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.BackgroundColor = ConsoleColor.Black;  //arkaplan rengini eski heline getir
+
+                    if (secimNoEski != -1) //kodda verdiğimiz -1 değeri duruyorsa bir şey yapma
+                    {                           // yeni seçimin arkapalnı değiştiği gibi eski seçimin arkaplanı normal hale gelir
+                        
+                    }
                 }
 
-            };
-            menu.MenuOlustur();
+                secimDegistir(); //program ilk çalıştığında ilk seçeneği vurgulayacak
+                ConsoleKeyInfo tus; //basılan tuşu değişkende tut
+                while (true)
+                {
+                    tus = Console.ReadKey(); //basılan tuşu kaydet
+                    switch (tus.Key)
+                    {
+                        case ConsoleKey.UpArrow: //yukarı ok basıldıysa 
+                            secimNoEski = secimNo; //değişiklik yapmadan önce eski değeri seçimi kaydet
+                            if (secimNo == 0) 
+                            { secimNo = menuSecenekler.Length - 1;} //zaten en yukardaysa en aşağıdaki seçeneği seç
+                            else 
+                            { secimNo--;} break; //yukardaki seçenek ayarlanır
+                        case ConsoleKey.DownArrow: //aşağı ok basıldıysa
+                            secimNoEski = secimNo; //değişiklik yapmadan önce eski değeri seçimi kaydet
+                            if (secimNo == menuSecenekler.Length - 1) 
+                            {secimNo = 0;} //zaten en aşağıdaysa ilk değeri seç
+                            else 
+                            { secimNo++;}break;//aşağıdaki seçeneği seç
+                        case ConsoleKey.Enter: 
+                            secimYap();break;
+                        case ConsoleKey.Spacebar: 
+                            secimYap(); break;    // enter veya boşluk basılması seçimi onaylar
+                    }
+                    secimDegistir();
+                }
+               
+            }
+            void secimYap()
+            {
+                Console.CursorVisible = true; //işaretçi görünrülüğünü aç
+                Console.Clear(); //ekranı temizle
+                Console.Title = menuSecenekler[secimNo]; //başlığı değiştirir
+                switch (secimNo) //hangi seçimdeyken enter basıldıysa ilgili kodlara yönlendirme yap
+                {
+                    case 0: konumaYazdir();//index 0
+                        break; 
+                    case 1: dortIslem();   //index 1
+                        break;  
+                    case 2: fibonacci2();
+                        break;
+                    case 3: parametreAktarma_Ornekler();
+                        break;
+                    case 4: kutuciz();
+                        break;
+                    case 5: tersyaz();   
+                        break;
+                    case 6: koleksiyonlar();
+                        break;
+                    case 7: sinif();
+                        break;
+
+                }
+                Console.ReadLine();
+                MenuOlustur();
+            }
             Console.ReadLine();
         }
         static void CalısanMetot(string isim) //sağ üst köşeye çalışmakta olan metot isimini yazdıracak kodlar
         {
-            CalısanMetotClass sınıf = new CalısanMetotClass();
-            sınıf.isim = isim;
-            sınıf.yaz();
+            int[] cursorXY = new int[2]; 
+            ConsoleColor consoleColor = Console.ForegroundColor; 
+            cursorXY[0] = Console.CursorLeft; cursorXY[1] = Console.CursorTop; // işlem yapıladan önceki işaretçi konumu ve renkler kaydedildi
+            Console.CursorLeft = Console.BufferWidth - isim.Length; 
+            Console.CursorTop = 0; // işaretçi sağ üst köşeey taşındı 
+
+            Random rnd = new Random(); 
+            ConsoleColor[] colors = (ConsoleColor[])ConsoleColor.GetValues(typeof(ConsoleColor));
+            Console.ForegroundColor = colors[rnd.Next(colors.Length)]; //Rastgele yazı rengi seçildi ve ayarlandı
+            Console.WriteLine(isim); //metota verilen isim değerini yazdır
+            Console.ForegroundColor = consoleColor; //yazı rengini eski rengine ayarla
+            Console.SetCursorPosition(cursorXY[0], cursorXY[1]); //işaretçi konumubu eski yerine konumlandır
         }
         static void konumaYazdir()// girilen konuma göre yazı yazdırılabilen program
         {
@@ -173,10 +288,21 @@ namespace nesne1
         }
         static void KutuOlustur(int kose1x, int kose1y, int kose2x, int kose2y)// gelen konumlara göre kutu çizdiren metot
         {
-
-            KutuOlusturClass kutu = new KutuOlusturClass();
-            kutu.basla(kose1x,kose1y,kose2x,kose2y);
-            
+            CalısanMetot("KutuOlustur(int kose1x, int kose1y, int kose2x, int kose2y)");
+            for (int i = kose1x; i <= kose2x; i++) //kutunun üstünü ve altını çizen döngü
+            {
+                Console.SetCursorPosition(i, kose1y); Console.WriteLine("═");//üst 
+                Console.SetCursorPosition(i, kose2y); Console.WriteLine("═");//alt
+            }
+            for (int i = kose1y; i <= kose2y; i++) //kutunun yanlarını çizdiren döngü
+            {
+                Console.SetCursorPosition(kose1x, i); Console.WriteLine("║");//sol
+                Console.SetCursorPosition(kose2x, i);Console.WriteLine("║");//sağ
+            }
+            Console.SetCursorPosition(kose1x, kose1y); Console.Write("╔");//kutunun köşelerini düzelten kodlar
+            Console.SetCursorPosition(kose2x, kose1y); Console.Write("╗");
+            Console.SetCursorPosition(kose1x, kose2y); Console.Write("╚");
+            Console.SetCursorPosition(kose2x, kose2y); Console.Write("╝");
         }
         static void KutuyuSil(int kose1x, int kose1y, int kose2x, int kose2y)  // aynı değerler girilirse çizilen kutuyu siler
         {
@@ -585,7 +711,10 @@ namespace nesne1
             }
                 
         }
-       
+        static void sinif()
+        {
+            Class1.clmetot();
+        }
     }
     
 }

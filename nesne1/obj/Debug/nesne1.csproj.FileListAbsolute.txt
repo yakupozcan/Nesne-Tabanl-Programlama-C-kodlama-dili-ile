@@ -5,3 +5,11 @@ C:\Users\EKREM\source\repos\nesne1\nesne1\bin\Debug\nesne1.exe
 C:\Users\EKREM\source\repos\nesne1\nesne1\bin\Debug\nesne1.pdb
 C:\Users\EKREM\source\repos\nesne1\nesne1\obj\Debug\nesne1.exe
 C:\Users\EKREM\source\repos\nesne1\nesne1\obj\Debug\nesne1.pdb
+D:\önemli disk\Project\VS Studio 2022\nesne1\nesne1\bin\Debug\nesne1.exe.config
+D:\önemli disk\Project\VS Studio 2022\nesne1\nesne1\bin\Debug\nesne1.exe
+D:\önemli disk\Project\VS Studio 2022\nesne1\nesne1\bin\Debug\nesne1.pdb
+D:\önemli disk\Project\VS Studio 2022\nesne1\nesne1\obj\Debug\nesne1.csproj.AssemblyReference.cache
+D:\önemli disk\Project\VS Studio 2022\nesne1\nesne1\obj\Debug\nesne1.exe.config
+D:\önemli disk\Project\VS Studio 2022\nesne1\nesne1\obj\Debug\nesne1.csproj.CoreCompileInputs.cache
+D:\önemli disk\Project\VS Studio 2022\nesne1\nesne1\obj\Debug\nesne1.exe
+D:\önemli disk\Project\VS Studio 2022\nesne1\nesne1\obj\Debug\nesne1.pdb
